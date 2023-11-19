@@ -38,6 +38,6 @@ It contains several tests to ensure the functionality of the Car Game. The tests
 ![Screenshot from 2023-11-19 15-43-46](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/7a65191c-c31b-4c5e-a727-3ff0ed5bc232)
 
 ## Test Result
-All the test get the passed result and the game code is perfect. Moreover the game is bug-free.
+All the test get the passed and the game code is perfect. Moreover the game is bug-free.
 
 ![Screenshot from 2023-11-17 23-02-31](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/ec2e4eca-eae9-4710-87fa-176c4a6cbec3)
