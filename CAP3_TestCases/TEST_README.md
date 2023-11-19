@@ -1,90 +1,43 @@
-## Test Documentation.
+## Car Game Test.
 
-# Overview
-This documentation provides details about the test cases implemented in the cargame project. The test cases are designed to ensure the correctness and reliability of the codebase by verifying the functionality of key components.
+## Overview
+This documentation provides details about the test cases implemented in the cargame(Racing Monster). The test is done using Pytest and the test cases are designed to ensure the correctness and reliability of the codebase by verifying the functionality of key components. This test covers various aspects of the game including screen size, images, sounds, collision detection, and game loop functionality.
 
-# Test Cases
-test_screen_size
-This test case checks if the screen size is set correctly using the Pygame library. It creates a Pygame display with a specified size and asserts that the screen's size matches the expected dimensions.
+## Running Tests
+It contains several tests to ensure the functionality of the Car Game. The tests include:
 
-Resources Used:
+1. **Screen Size Test**: This test checks if the pygame screen is correctly initialized with the given size.
 
-Pygame library
-Pytest framework
-Justification:
+![Screenshot from 2023-11-19 15-37-38](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/a7da9cec-a8fd-427d-98de-92eb0a934aeb)
 
-Pygame is used for graphical user interface development in the cargame project.
-Pytest is employed for easy and organized unit testing.
-test_introImg
-This test case verifies the loading of the introductory image. It loads the specified image file and asserts that the image is successfully loaded.
+2. **Intro Image Test**: This test checks if the intro image is loaded correctly. We load the image using the pygame   image load function and assert that the image is loaded.
 
-Resources Used:
+![Screenshot from 2023-11-19 15-21-11](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/f1028776-dff0-4a68-8f4e-deeaa854517b)
 
-Pygame library
-Pytest framework
-Justification:
+3. **Instruction Image Test**: This test case checks if the instruction image is loaded correctly. I load the image using the pygame image load function and assert that the image is loaded.
 
-Ensures the correct loading of necessary images for the game.
-test_instructionIMG
-Similar to test_introImg, this test case checks the loading of the instruction image.
+![Screenshot from 2023-11-19 15-25-03](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/b04d4bd5-3c3d-4a9a-a491-7aaedfcdad53)
 
-Resources Used:
+4. **Pygame Mixer Music Play Test**: This test case checks if the music is played correctly. I load the music using the pygame mixer music load function and then play the music. I assert that the music is playing by checking if pygame.mixer.music.get_busy() returns True.
 
-Pygame library
-Pytest framework
-Justification:
+![Screenshot from 2023-11-19 15-27-41](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/779127c8-8ccb-4d7d-8486-4214bd95605d)
 
-Validates the loading of another essential image.
-test_pygame_mixer_music_play
-This test case checks the functionality of Pygame mixer for playing music. It loads three different music files and asserts that the music playback is initiated.
+5. **Countdown Test**: This test case checks if the countdown function works correctly. I have create a font and load a background image. I assert that the font and image load functions exist.
 
-Resources Used:
+![Screenshot from 2023-11-19 15-29-49](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/0ec43ddd-8c96-4db8-885f-329e6c42eac1)
 
-Pygame library
-Pytest framework
-Justification:
+6. **IsCollision Detection Test**: This test case checks if the collision detection function works correctly.I have define the positions of the main car and three other cars. I have calculate the collisions between the main car and the other cars and assert that the collision calculations are correct.
 
-Ensures the correct loading and playing of game sounds.
-test_countdown
-This test case focuses on the countdown functionality. It checks the loading of a background image for the countdown and asserts the availability of required resources.
+![Screenshot from 2023-11-19 15-32-47](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/442dff24-d450-4e1f-9474-74ef9d8606b9)
 
-Resources Used:
+7. **Game Loop Test**:  This test checks if the game over functionality is working correctly.
+![Screenshot from 2023-11-19 15-39-58](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/8e46150a-f9a8-4c9a-8456-b593bb2a6c07)
 
-Pygame library
-Pytest framework
-Justification:
+8. **Game Over Test**: This test checks if the game over event correctly exits the game when the user presses the space bar. It does this by mocking the events that are triggered within the game loop and asserting that the countdown function and the sys.exit function are called correctly.
 
-Validates the countdown feature and associated image loading.
-test_iscollision_detection
-This test case checks the collision detection logic in the game. It defines positions for the main car and three other cars, creating collision tuples for each pair, and asserts their existence.
+![Screenshot from 2023-11-19 15-43-46](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/7a65191c-c31b-4c5e-a727-3ff0ed5bc232)
 
-Resources Used:
+## Test Result
+All the test get the passed and the game code is perfect. Moreover the game is bug-free.
 
-Pygame library
-Pytest framework
-Justification:
-
-Verifies the correctness of collision detection in the game.
-test_gameloop
-This test case checks the game loop functionality. It sets up a Pygame screen, a clock, and mocks the system exit to ensure the game loop can be exited without actual system termination.
-
-Resources Used:
-
-Pygame library
-Pytest framework
-unittest.mock
-Justification:
-
-Validates the behavior of the game loop.
-test_gameover
-This test case focuses on the game-over scenario. It mocks Pygame functions related to image loading and display update, simulating a game-over event triggered by either quitting or pressing the space key. Assertions are made based on the expected behavior of the game-over event.
-
-Resources Used:
-
-Pygame library
-Pytest framework
-unittest.mock
-Justification:
-
-Ensures proper handling of game-over conditions.
-
+![Screenshot from 2023-11-17 23-02-31](https://github.com/Baluthegoat/CSF101_CAP3_Testcase/assets/141105500/ec2e4eca-eae9-4710-87fa-176c4a6cbec3)
